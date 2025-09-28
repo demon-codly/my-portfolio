@@ -4,15 +4,19 @@ import theme_pattern from '../../assets/theme_pattern.svg'
 import mail_icon from '../../assets/mail_icon.svg'
 import location_icon from '../../assets/location_icon.svg'
 
+
 const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
+
     formData.append("access_key", "6f9b1144-7d08-4508-bcc7-82295cbd9da0");
+
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
+
 
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -23,10 +27,14 @@ const Contact = () => {
       body: json
     }).then((res) => res.json());
 
+
     if (res.success) {
       alert(res.message);
+      // This line will clear the form fields
+      event.target.reset();
     }
   };
+
 
 
   return (
@@ -61,5 +69,6 @@ const Contact = () => {
     </div>
   )
 }
+
 
 export default Contact
