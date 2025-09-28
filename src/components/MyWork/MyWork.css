@@ -1,130 +1,78 @@
-.mywork{
+/* --- MyWork Section --- */
+.mywork {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 10%;
+    gap: clamp(40px, 6vw, 80px);
+    margin: 5rem 5%;
 }
 
-.mywork-title{
+/* --- MyWork Title --- */
+.mywork-title {
     position: relative;
+    text-align: center;
 }
 
-.mywork-title h1{
-    margin: 0px;
-    padding: 0px 30px;
-    font-size: 60px;
+.mywork-title h1 {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
     font-weight: 600;
+    margin: 0;
+    padding: 0 1.5rem;
 }
 
-.mywork-title img{
+.mywork-title img {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     right: 0;
     z-index: -1;
-    width: 160px;
+    width: clamp(100px, 15vw, 160px);
 }
 
-.mywork-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+/* --- MyWork Container --- */
+.mywork-container {
+    display: grid;
+    /* Creates a responsive grid that adjusts columns automatically */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
 }
 
-/* Style for the link (anchor tag) wrapping the image */
 .mywork-container a {
-  display: block; /* Ensures the anchor tag behaves like a block */
-  border-radius: 10px;
-  border: 4px solid transparent; /* Transparent border to prevent layout shift on hover */
-  transition: transform 0.3s, border-color 0.3s;
-  cursor: pointer;
-  overflow: hidden; /* Keeps the image within the rounded corners */
-}
-
-/* Style for the image inside the link */
-.mywork-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the container without distortion */
-  display: block; /* Removes any extra space below the image */
-}
-
-/* Hover effect on the link */
-.mywork-container a:hover {
-  transform: scale(1.05);
-  border-color: #ff00ff;
-}
-
-.mywork-container img:hover{
-    transform: scale(1.05);
-    border: 4px solid #ff00ff;
+    display: block;
     border-radius: 10px;
-    transition: 0.3s;
-    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); */
+    border: 4px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.mywork-showmore{
+.mywork-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mywork-container a:hover {
+    transform: scale(1.05);
+    border-color: #ff00ff;
+}
+
+/* --- "Show More" Button --- */
+.mywork-showmore {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     border-radius: 50px;
     border: 2px solid white;
-    padding: 20px 40px;
-    font-size: 20px;
+    padding: 1rem 2.5rem;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
     font-weight: 500;
-    margin-bottom: 20px;
-    transition: 0.6s;
+    transition: gap 0.6s;
     cursor: pointer;
-    margin: 0px;
 }
 
-.mywork-showmore:hover{
-    gap: 30px;
-    transition: 0.6s;
-}
-
-.mywork-showmore img{
-    width: 25px;
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-
-.mywork-showmore p{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-    .mywork{
-        margin: 50px 70px;
-        gap: 50px;
-        align-items: start;
-    }
-
-    .mywork-title h1{
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
-    }   
-    .mywork-title img{
-        width: 130px;
-        margin-right: -20px;
-    }
-    .mywork-container{
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-    .mywork-container img{
-        width: 100%;
-        height: 100%;
-    }
-    .mywork-showmore{
-        padding: 20px 40px;
-        font-size: 18px;
-        margin: 50px auto;
-        cursor: pointer;
-    }
+.mywork-showmore:hover {
+    gap: 2rem;
 }

@@ -1,106 +1,80 @@
-.profile-pic {
-    width: 200px;          /* adjust size */
-    height: 200px;         /* keep square for perfect circle */
-    border-radius: 50%;    /* makes it circular */
-    object-fit: cover;     /* crops inside evenly */
-    border: 4px solid white; /* optional: adds white border */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* optional: soft shadow */
-    margin-top: 70px;  /* space from top */
-}
-
-.hero{
+/* --- Hero Section --- */
+.hero {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 0px;
+    gap: 1.5rem;
+    padding: 0 5%; /* Use padding instead of width for content */
+    margin: 4rem 0;
+}
+
+.profile-pic {
+    width: clamp(150px, 20vw, 200px); /* Fluid size */
+    height: clamp(150px, 20vw, 200px);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero h1 {
     text-align: center;
-    width: 70%;
-    font-size: 60px;
+    font-size: clamp(2.5rem, 6vw, 3.75rem); /* Fluid font size */
     font-weight: 600;
-    margin-top: 30px;
-    margin-bottom: 0px;
 }
 
 .hero h1 span {
     background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.hero p{
-    width: 50%;
+.hero p {
+    max-width: 750px; /* Max width to maintain readability */
+    width: 90%;
     text-align: center;
-    font-size: 18px;
-    line-height: 40px;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.8;
 }
 
-.hero-action{
+/* --- Hero Action Buttons --- */
+.hero-action {
     display: flex;
     align-items: center;
-    gap: 25px;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 50px;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
-.hero-connect{
-    font-size: 14px;
-    padding: 25px 45px;
+.hero-connect,
+.hero-resume {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    padding: 1rem 2rem;
     border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none; /* Ensure anchor tags are not underlined */
+    color: white; /* Default text color */
+}
+
+.hero-connect {
     background: linear-gradient(264deg, #DF8908 0.36%, #B415FF 106.28%);
-    cursor: pointer;
+    border: 2px solid transparent;
 }
 
-.hero-resume{
-    font-size: 14px;
-    padding: 25px 75px;
-    border-radius: 50px;
-    border: 2px solid #fff;
-    cursor: pointer;
-    color: #fff;
-    text-decoration: none;
-}
-
-.hero-connect:hover{
+.hero-resume {
     border: 2px solid #fff;
 }
 
-.hero-resume:hover{
+.hero-connect:hover {
+    border: 2px solid #fff;
+    transform: scale(1.05);
+}
+
+.hero-resume:hover {
     border-color: #B415FF;
-}
-
-@media (max-width: 768px) {
-    .hero img{
-        margin-top: 120px;
-        width: 260px;
-    }
-    .hero h1{
-        margin-top: 50px;
-        width: 90%;
-        font-size: 50px
-    }
-    .hero p{
-        width: 60%;
-        font-size: 18px;
-        line-height: 32px;
-        margin: 10px 0px;  
-    }
-    .hero-action{
-        gap: 16px;
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 50px;
-    }
-    .hero-connect{
-        padding: 20px 30px;
-        border-radius: 40px;
-    }
-    .hero-resume{
-        padding: 20px 50px;
-        border-radius: 40px;
-    }
+    transform: scale(1.05);
 }
