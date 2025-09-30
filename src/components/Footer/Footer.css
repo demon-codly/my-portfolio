@@ -20,7 +20,7 @@
     min-width: 280px;
 }
 
-.logo {
+.logo-footer {
     max-height: 200px;
     width: 387px;
     margin-bottom: 1rem;
@@ -108,7 +108,7 @@
         align-items: center;
         text-align: center;
     }
-    .logo{
+    .logo-footer{
         width: 387px;
         height: 200px;
     }
