@@ -20,11 +20,11 @@
     min-width: 280px;
 }
 
-.footer-top-left .logo {
+/* .footer-top-left .logo {
     max-height: 50px;
     width: auto;
     margin-bottom: 1rem;
-}
+} */
 
 .footer-top-left p {
     font-size: clamp(0.9rem, 1.1vw, 1rem);
