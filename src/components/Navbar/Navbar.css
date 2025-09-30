@@ -1,6 +1,5 @@
 /* --- Base Navbar Style (Now defaults to non-sticky) --- */
 .navbar {
-    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
