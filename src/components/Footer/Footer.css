@@ -20,8 +20,8 @@
     min-width: 280px;
 }
 
-.footer-top-left .logo {
-    max-height: 50px;
+.logo {
+    max-height: 200px;
     width: auto;
     margin-bottom: 1rem;
 }
