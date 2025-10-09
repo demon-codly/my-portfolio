@@ -24,10 +24,11 @@ const mywork_data = [
     },
     {
         w_no:4,
-        w_name:"Survey Form",
+        w_name:"Patient Care",
         w_img:project4_img,
-        w_url:"https://survey-form-five-swart.vercel.app/"
+        w_url:"https://patientcare-sushanth.streamlit.app/"
     },
+    
 ]
  
 export default mywork_data;
