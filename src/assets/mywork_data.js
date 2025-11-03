@@ -12,9 +12,9 @@ const mywork_data = [
     },
     {
         w_no:2,
-        w_name:"To-Do List",
+        w_name:"Blug-Blaster",
         w_img:project2_img,
-        w_url:"https://specialtodolist.vercel.app/"
+        w_url:"https://blug-creator.vercel.app/"
     },
     {
         w_no:3,
