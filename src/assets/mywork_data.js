@@ -2,7 +2,7 @@ import project1_img from '../assets/project_1.png'
 import project2_img from '../assets/project_2.png'
 import project3_img from '../assets/project_3.png'
 import project4_img from '../assets/project_4.png'
-
+import project5_img from '../assets/project_5.png'
 const mywork_data = [
     {
         w_no:1,
@@ -27,6 +27,12 @@ const mywork_data = [
         w_name:"Patient Care",
         w_img:project4_img,
         w_url:"https://patientcare-sushanth.streamlit.app/"
+    },
+    {
+        w_no:5,
+        w_name:"Movie Crazy",
+        w_img:project5_img,
+        w_url:"https://movie-crazy.vercel.app/"
     },
     
 ]
