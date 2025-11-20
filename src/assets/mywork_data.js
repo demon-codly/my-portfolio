@@ -3,6 +3,7 @@ import project2_img from '../assets/project_2.png'
 import project3_img from '../assets/project_3.png'
 import project4_img from '../assets/project_4.png'
 import project5_img from '../assets/project_5.png'
+import project6_img from '../assets/project_5.png'
 const mywork_data = [
     {
         w_no:1,
@@ -33,6 +34,12 @@ const mywork_data = [
         w_name:"Movie Crazy",
         w_img:project5_img,
         w_url:"https://movie-crazy.vercel.app/"
+    },
+    {
+        w_no:6,
+        w_name:"BlogApp",
+        w_img:project6_img,
+        w_url:"https://blogapplication-nine.vercel.app/"
     },
     
 ]
